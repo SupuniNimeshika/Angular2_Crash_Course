@@ -18,3 +18,7 @@ Angular2 basic theory.
 4. Launch the server
 
     ng serve --open
+    
+5. Create component using cmd
+
+    ng generate component <component_name>

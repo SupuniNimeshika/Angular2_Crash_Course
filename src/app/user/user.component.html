@@ -11,6 +11,11 @@
             {{hobby}}
         </li>
       </ul>
+      <form (submit)="addHobby(hobby.value)">
+        <label>Add Hobby:</label><br/>
+        <input type="text" #hobby />
+
+      </form>
   </div>
   <hr/>
   <h2>Edit User</h2>

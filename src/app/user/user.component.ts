@@ -26,12 +26,16 @@ export class UserComponent {
   }
 
   toggleHobbies(){
-    console.log('show');
     if(this.showHobbies == true){
       this.showHobbies =false;
     }else {
       this.showHobbies =true;
     }
+  }
+
+  addHobby(hobby){
+    console.log(hobby);
+    this.hobbies.push(hobby);
   }
 }
 

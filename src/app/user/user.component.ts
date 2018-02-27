@@ -10,6 +10,7 @@ export class UserComponent {
   name: string;
   email: string;
   address: address;
+  hobbies: string[];
 
   constructor() {
     this.name = 'Supuni Nimeshika';
@@ -19,6 +20,7 @@ export class UserComponent {
       Street: 'Lebeema',
       city: 'Kamburugamuwa'
     }
+    this.hobbies =['Music','Movies','Sports'];
   }
 }
 

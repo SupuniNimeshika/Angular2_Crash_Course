@@ -3,4 +3,10 @@
   <h3><strong>Email:</strong> {{email}}</h3>
   <h3><strong>Address:</strong> {{address.No}}, {{address.Street}}, {{address.city}}
   </h3>
+  <h3>Hobbies</h3>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+        {{hobby}}
+    </li>
+  </ul>
 </div>

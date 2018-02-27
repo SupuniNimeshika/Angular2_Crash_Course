@@ -5,20 +5,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserComponent {
 
-  title = 'app';
-  name = 'Supuni Nimeshika';
-  email = 'supuni.nimeshika@gmail.com';
+  name: string;
+  email: string;
+  address: address;
 
-  address = {
-    No : '"Weerasewana"',
-    Street: 'Lebeema',
-    city: 'Kamburugamuwa'
+  constructor() {
+    this.name = 'Supuni Nimeshika';
+    this.email = 'supuni.nimeshika@gmail.com';
+    this.address ={
+      No : '"Weerasewana"',
+      Street: 'Lebeema',
+      city: 'Kamburugamuwa'
+    }
   }
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
+
+ interface address{
+  No:string;
+  Street:string;
+  city:string;
+ }

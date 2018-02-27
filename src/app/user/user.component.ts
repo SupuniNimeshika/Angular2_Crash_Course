@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {PostsService} from "../services/posts.service";
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
+  providers:[PostsService]
 })
 export class UserComponent {
 
@@ -12,8 +14,9 @@ export class UserComponent {
   address: address;
   hobbies: string[];
   showHobbies:boolean;
+  posts:Post[];
 
-  constructor() {
+  constructor(private postsService: PostsService) {
     this.name = 'Supuni Nimeshika';
     this.email = 'supuni.nimeshika@gmail.com';
     this.address ={
@@ -23,6 +26,10 @@ export class UserComponent {
     }
     this.hobbies =['Music','Movies','Sports'];
     this.showHobbies = false;
+
+    this.postsService.getPosts().subscribe(posts => {
+      console.log(posts);
+    });
   }
 
   toggleHobbies(){
@@ -47,4 +54,10 @@ export class UserComponent {
   No:string;
   Street:string;
   city:string;
+ }
+
+ interface Post{
+  id: number;
+  title: string;
+  body: string;
  }

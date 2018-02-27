@@ -11,6 +11,7 @@ export class UserComponent {
   email: string;
   address: address;
   hobbies: string[];
+  showHobbies:boolean;
 
   constructor() {
     this.name = 'Supuni Nimeshika';
@@ -21,6 +22,12 @@ export class UserComponent {
       city: 'Kamburugamuwa'
     }
     this.hobbies =['Music','Movies','Sports'];
+    this.showHobbies = false;
+  }
+
+  toggleHobbies(){
+    console.log('show');
+    this.showHobbies =true;
   }
 }
 

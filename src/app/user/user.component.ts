@@ -37,6 +37,10 @@ export class UserComponent {
     console.log(hobby);
     this.hobbies.push(hobby);
   }
+
+  deleteHobby(i){
+    this.hobbies.splice(i,1);
+  }
 }
 
  interface address{

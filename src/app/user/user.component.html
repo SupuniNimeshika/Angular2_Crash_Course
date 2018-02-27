@@ -3,7 +3,7 @@
   <h3><strong>Email:</strong> {{email}}</h3>
   <h3><strong>Address:</strong> {{address.No}}, {{address.Street}}, {{address.city}}
   </h3>
-  <button (click)="toggleHobbies()">Show Hobbies</button>
+  <button (click)="toggleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
   <div *ngIf="showHobbies">
       <h3>Hobbies</h3>
       <ul>
